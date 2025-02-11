@@ -18,11 +18,11 @@ Para testes físicos, podemos atribuir o programa PWM em um LED para que seja po
 
 1) Como a placa BitDogLab já tem um LED azul, deve-se utilizar:
 ```ruby
- $ #define PIN_SERVO 12
+ #define PIN_SERVO 12
 ```
 Caso queira utilizar o PWM no servomotor, como na simulação, deve-se utilizar:
 ```ruby
- $ #define PIN_SERVO 22
+ #define PIN_SERVO 22
 ```
 Em que 12 respresenta a GPIO do LED azul e 22 respresenta a GPIO escolhida para o servomotor.
 
