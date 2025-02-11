@@ -14,6 +14,51 @@ Para testes físicos, podemos atribuir o programa PWM em um LED para que seja po
 
 4) Resistor de 330 Ohms.
 
+## Modelagem
+
+A frequência do PWM na Raspberry Pi Pico é determinada pela seguinte equação:
+
+```math
+f_{\text{PWM}} = \frac{f_{\text{clock}}}{\text{divisor} \times (\text{WRAP} + 1)}
+
+{\text{divisor} \times (\text{WRAP} + 1)} =  \frac{f_{\text{clock}}}{f_{\text{PWM}}}
+
+{\text{divisor} \times (\text{WRAP} + 1)} =  \frac{125000000}{50}
+
+Considerando o divisor inteiro como 100, teremos:
+
+{100 \times (\text{WRAP} + 1)} = \frac{125000000}{50}
+
+{(\text{WRAP} + 1)} = \frac{25000000}{100}
+
+{(\text{WRAP})} =  {25000 - 1}
+
+{(\text{WRAP})} =  {24999}
+```
+
+Para calculo dos ciclos ativos, teremos:
+```math
+\text{DC} = \frac{T_{\text{pulso}}}{\text{WARP}}
+$$
+
+Para diferentes valores de DC:
+
+- Para **DC = 0,12%**:  
+  $$
+  0.0012 = \frac{T_{\text{pulso}}}{\text{WARP}}
+  $$
+
+- Para **DC = 0,0725%**:  
+  $$
+  0.000725 = \frac{T_{\text{pulso}}}{\text{WARP}}
+  $$
+
+- Para **DC = 0,025%**:  
+  $$
+  0.00025 = \frac{T_{\text{pulso}}}{\text{WARP}}
+  $$
+```
+
 ## Intruções de uso
 
 1) Como a placa BitDogLab já tem um LED azul, deve-se utilizar:
