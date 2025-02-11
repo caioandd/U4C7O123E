@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Caio A. da C. Andrade",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 17.2, "left": 153.6, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 111.6, "left": -73, "attrs": { "color": "blue" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 187.2,
+      "left": -86.95,
+      "rotate": 90,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.8", "servo1:GND", "black", [ "h61.46", "v35.15" ] ],
+    [ "pico:3V3", "servo1:V+", "red", [ "h42.26", "v25.55" ] ],
+    [ "pico:GP22", "servo1:PWM", "blue", [ "h42.26", "v-32.05" ] ],
+    [ "pico:GP12", "led1:A", "green", [ "h0" ] ],
+    [ "r1:1", "led1:C", "green", [ "h0" ] ],
+    [ "pico:GND.4", "r1:2", "black", [ "h-25.25", "v44.79" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/UC7O123E.uf2'
+elf = 'build/UC7O123E.elf'
