@@ -32,7 +32,6 @@ void pwm_setup(){
     pwm_set_clkdiv(slice, PWM_DIVISER); // Divisor de clock do PWM
     pwm_set_wrap(slice, WRAP_PERIOD); // WRAP
     pwm_set_enabled(slice, true); // Liga o PWM
-    pwm_set_gpio_level(PIN_SERVO, POS_SERVO); //Nivel do PWN (% de Duty)
 }
 
 void loop_servo(){
