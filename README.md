@@ -17,27 +17,45 @@ Para testes físicos, podemos atribuir o programa PWM em um LED para que seja po
 ## Modelagem
 
 A frequência do PWM na Raspberry Pi Pico é determinada pela seguinte equação:
-
 ```math
+$$
 f_{\text{PWM}} = \frac{f_{\text{clock}}}{\text{divisor} \times (\text{WRAP} + 1)}
+$$
 
-{\text{divisor} \times (\text{WRAP} + 1)} =  \frac{f_{\text{clock}}}{f_{\text{PWM}}}
+Rearranjando a equação, temos:
 
-{\text{divisor} \times (\text{WRAP} + 1)} =  \frac{125000000}{50}
+$$
+\text{divisor} \times (\text{WRAP} + 1) =  \frac{f_{\text{clock}}}{f_{\text{PWM}}}
+$$
+
+Substituindo os valores:
+
+$$
+\text{divisor} \times (\text{WRAP} + 1) =  \frac{125000000}{50}
+$$
 
 Considerando o divisor inteiro como 100, teremos:
 
-{100 \times (\text{WRAP} + 1)} = \frac{125000000}{50}
+$$
+100 \times (\text{WRAP} + 1) = \frac{125000000}{50}
+$$
 
-{(\text{WRAP} + 1)} = \frac{25000000}{100}
+Isolando WRAP:
 
-{(\text{WRAP})} =  {25000 - 1}
+$$
+(\text{WRAP} + 1) = \frac{25000000}{100}
+$$
 
-{(\text{WRAP})} =  {24999}
-```
+$$
+\text{WRAP} = 250000 - 1
+$$
+
+$$
+\text{WRAP} = 24999
+$$
 
 Para calculo dos ciclos ativos, teremos:
-```math
+
 \text{DC} = \frac{T_{\text{pulso}}}{\text{WARP}}
 $$
 
