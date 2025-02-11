@@ -79,3 +79,7 @@ Após, inicia-se um movimento infinito que varia entre:
 * 500µs (0,025%): Posiciona o servo em 0º (aguarda 0.5s).
 
 * 2.400µs (0,12%): Posiciona o servo em 180º (aguarda 0.5s).
+
+## Ensaio
+
+https://drive.google.com/file/d/12N33TZMOtpGC7EnGYzpB98oNIwS8C0vE/view?usp=sharing
