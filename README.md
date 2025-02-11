@@ -55,7 +55,7 @@ $$
 $$
 
 Para calculo dos ciclos ativos, teremos:
-
+$$
 \text{DC} = \frac{T_{\text{pulso}}}{\text{WARP}}
 $$
 
