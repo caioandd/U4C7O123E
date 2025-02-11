@@ -53,30 +53,7 @@ $$
 $$
 \text{WRAP} = 24999
 $$
-
-Para calculo dos ciclos ativos, teremos:
-$$
-\text{DC} = \frac{T_{\text{pulso}}}{\text{WARP}}
-$$
-
-Para diferentes valores de DC:
-
-- Para **DC = 0,12%**:  
-  $$
-  0.0012 = \frac{T_{\text{pulso}}}{\text{WARP}}
-  $$
-
-- Para **DC = 0,0725%**:  
-  $$
-  0.000725 = \frac{T_{\text{pulso}}}{\text{WARP}}
-  $$
-
-- Para **DC = 0,025%**:  
-  $$
-  0.00025 = \frac{T_{\text{pulso}}}{\text{WARP}}
-  $$
 ```
-
 ## Intruções de uso
 
 1) Como a placa BitDogLab já tem um LED azul, deve-se utilizar:
